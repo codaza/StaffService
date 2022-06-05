@@ -54,10 +54,6 @@ namespace StaffService.Middlewares
                 StatusCode = (int)httpStatusCode
             };
 
-            // В ролике здесь выполняется сериализация, но
-            // она не нужна, так как мы её выполняем в классе ErrorDto :)
-            //string result = JsonSerializer.Serialize(errorDto);
-
             await response.WriteAsJsonAsync(errorDto);
         }
     }
